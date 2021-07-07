@@ -1,50 +1,100 @@
 <script language="javascript" type="text/javascript">
-function multiply(){
-a=Number(document.my_cal.first.value);
-b=Number(document.my_cal.second.value);
-c=a*b;
-document.my_cal.total.value=c;
+	function multiply(){
+	a=Number(document.my_cal.first.value);
+	b=Number(document.my_cal.second.value);
+	c=a*b;
+	document.my_cal.total.value=Math.round(c*1000000)/1000000;
 }
 </script>
+
 <script language="javascript" type="text/javascript">
-function addition(){
-a=Number(document.my_cal.first.value);
-b=Number(document.my_cal.second.value);
-c=a+b;
-document.my_cal.total.value=c;
-}
+	function addition(){
+	a=Number(document.my_cal.first.value);
+	b=Number(document.my_cal.second.value);
+	c=a+b;
+	document.my_cal.total.value=Math.round(c*1000000)/1000000;
+	}
 </script>
+
 <script language="javascript" type="text/javascript">
-function subtraction(){
-a=Number(document.my_cal.first.value);
-b=Number(document.my_cal.second.value);
-c=a-b;
-document.my_cal.total.value=c;
-}
+	function subtraction(){
+	a=Number(document.my_cal.first.value);
+	b=Number(document.my_cal.second.value);
+	c=a-b;
+	document.my_cal.total.value=Math.round(c*1000000)/1000000;
+	}
 </script>
+
 <script language="javascript" type="text/javascript">
-function division(){
-a=Number(document.my_cal.first.value);
-b=Number(document.my_cal.second.value);
-c=a/b;
-document.my_cal.total.value=c;
-}
+	function division(){
+	a=Number(document.my_cal.first.value);
+	b=Number(document.my_cal.second.value);
+	c="--";
+	if(b!=0)
+	{
+		c=a/b;
+		c=Math.round(c*1000000)/1000000;
+	}
+	document.my_cal.total.value=c;
+	}
 </script>
+
+<script language="javascript" type="text/javascript">
+	function clean(){
+	document.my_cal.first.value="";
+	document.my_cal.second.value="";
+	document.my_cal.total.value="";
+	}
+</script>
+
 <html>
+	
+<style>
+	
+	body{
+		text-align:center;
+		margin:40px;
+		background-color:#b2bec3;
+	}
+	
+	.main{
+		margin-left:400px;
+		margin-right:400px;
+		padding:20px;
+		border: 10px solid black;
+		background-color:#636e72;
+	}
+	
+</style>
+	
 <body>
-<h1>a simple calculator programm</h1>
+
+<div class="main">
+
+<h1>A simple calculator program</h1>
+
 
 <!-- Opening a HTML Form. -->
 <form name="my_cal">
 
 <!-- Here user will enter 1st number. -->
 Number 1: <input type="text" name="first">
+<br><br>
+
 <!-- Here user will enter 2nd number. -->
 Number 2: <input type="text" name="second">
+<br><br>
+
 <!-- Here result will be displayed. -->
 Get Result: <input type="text" name="total">
+<br><br>
+
 <input type="button" value="ADD" onclick="javascript:addition();">
 <input type="button" value="SUB" onclick="javascript:subtraction();">
 <input type="button" value="MUL" onclick="javascript:multiply();">
 <input type="button" value="DIV" onclick="javascript:division();">
+<br><br>
+<input type="button" value="CLEAR" onclick="javascript:clean();">
+
 </form>
+</div>
