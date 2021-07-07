@@ -1,0 +1,14 @@
+<html>
+<body>
+<?php
+$a = 10;
+$b = 20;
+function display()
+{
+echo "the value of a is: ". $GLOBALS['a']. "<br>";
+echo "the value of b is: ". $GLOBALS['b'];
+}
+display()
+?>
+</body>
+</html>

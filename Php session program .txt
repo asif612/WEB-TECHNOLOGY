@@ -1,0 +1,17 @@
+<html>
+<head>
+<title></title>
+</head>
+<body style="background-color:yellow">
+<h3 style="text-align:center;color:red"> the number of times page visited is </h3>
+				<center>
+<?php
+session_start();  
+if(isset($_SESSION['views']))
+         $_SESSION['views'] = $_SESSION['views']+ 1;
+else
+         $_SESSION['views'] = 1;
+echo "views = ". $_SESSION['views']; 
+?>
+</body>
+</html>

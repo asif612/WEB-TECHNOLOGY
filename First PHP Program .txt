@@ -1,0 +1,27 @@
+<html>
+<body bgcolor="red">
+
+<?php
+echo "My first PHP script!";
+$x = 10;
+echo $x;
+echo "<br/>";	
+$count = 4.9;
+echo $count;
+echo "<br/>";
+
+$username = 'bye';
+echo "Hello". $username;
+
+echo "<br/>";
+$firstName = "Pablo";
+$lastName = "Picasso";
+
+echo "<em>" . $firstName . " ". $lastName. "</em>";  
+/*echo "<em> $firstName $lastName </em>";*/
+
+
+?> 
+
+</body>
+</html>
